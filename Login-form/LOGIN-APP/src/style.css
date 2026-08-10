@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+}
+
+/* App Layout */
+.app-wrapper {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f0f0f0;
+}
+
+.form-card {
+	width: 100%;
+	max-width: 500px;
+	background-color: #ffffff;
+	border-radius: 8px;
+	padding: 32px;
+	box-sizing: border-box;
+}
+
+.done-text {
+	text-align: center;
+	font-weight: 700;
+}
+
+/* Account */
+.step-title {
+	text-align: center;
+}
+
+.account-next-button {
+	margin-top: 20px;
+}
+
+/* Profile */
+.profile-row {
+	display: flex;
+	gap: 16px;
+}
+
+.profile-button-row {
+	display: flex;
+	gap: 16px;
+	margin-top: 20px;
+}
+
+/* Review */
+.review-label {
+	font-size: 14px;
+}
+
+.review-value {
+	font-size: 14px;
+	color: #999999;
+	margin-bottom: 16px;
+}
+
+.review-button-row {
+	display: flex;
+	gap: 16px;
+	margin-top: 20px;
+}
