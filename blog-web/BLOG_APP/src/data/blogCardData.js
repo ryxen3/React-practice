@@ -17,7 +17,7 @@ import marryRolson from "../assets/Marry-rolson.jpeg";
 const blogCardData = [
   {
     id: 1,
-    topic: "Hoverbic",
+    topic: ["Hoverbic"],
     title: "The worlds most popular fashion blogger",
     shortDescription:
       "Splendide consectetuer eum in, vis id nostrud labores. No nam esse omnes interpretaris, quaestio delicata at nec. Est nisl menandri",
@@ -29,12 +29,12 @@ const blogCardData = [
     detailimage: detailimage1,
     designerImage: leonaPeters,
     designerDescription: "Leona is a London-based digital designer with over six years experience working on high-profile commercial campaigns for global brands. With a background in illustration and photoshop, her attention to detail and genuine passion for design & code.",
-    tag: "Best Design, Fashion Design"
+    tag: ["Best Design", "Fashion Design"]
 
   },
   {
     id: 2,
-    topic: "Fashion",
+    topic: ["Fashion"],
     title: "Brand New Fashion Line for 2018",
     shortDescription:
       "Lorem ipsum dolor sit amet, sed summo dolores torquatos cu. Everti antiopam assentior ea mei, per erant dicant interpretaris ad.",
@@ -46,11 +46,11 @@ const blogCardData = [
     detailimage: detailimage2,
     designerImage: frankCruz,
     designerDescription: "Frank is the lead developer of Blog Designer. He is a big fan of WordPress and loves to write about WordPress, themes and plugins. You find him here at Blog Designer all the time! Cheers!",
-    tag: "Fashion Design"
+    tag: ["Fashion Design"]
   },
   {
     id: 3,
-    topic: "Fashion",
+    topic: ["Fashion"],
     title: "Budget Friendly Fashion Bloggers",
     shortDescription:
       "If you're anything like me, one of your favorite pasttimes, amongst Netflix bingeing and cake baking, is looking at fashion blogs",
@@ -62,11 +62,11 @@ const blogCardData = [
     detailimage: detailimage3,
     designerImage:adminImage,
     designerDescription: "We build top-notch WordPress themes and plugins that are not just visually stunning but also have great features to offer. So far, we have developed and launched 30+ best-selling WordPress plugins and themes which are being used by more than 25000 websites around the world.",
-    tag: "Fashion Design"
+    tag: ["Fashion Design"]
   },
   {
     id: 4,
-    topic: "Fashion",
+    topic: ["Fashion"],
     title: "How to Become a Successful Fashion Designer",
     shortDescription:
       "Want to know how to become a successful fashion designer? If you have spent your formative years watching “Project Runway,” reading",
@@ -80,7 +80,7 @@ const blogCardData = [
   },
   {
     id: 5,
-    topic: "Lifestyle",
+    topic: ["Lifestyle"],
     title: "How to Be a Good Friend on Social Media",
     shortDescription:
       "Being a good friend isn't always easy, but taking the time to nurture a lasting friendship is worth every ounce",
@@ -95,7 +95,7 @@ const blogCardData = [
   },
   {
     id: 6,
-    topic: "Food, Restaurant",
+    topic: ["Food", "Restaurant"],
     title: "Let's Cook Some Tasty Things With Chef Charlie",
     shortDescription:
       "Gieui cu solum dolor iudico, minim omittam dissentiunt eam no, ad mea solum aeque consul. In consequat efficiantur qui, te",
@@ -107,7 +107,7 @@ const blogCardData = [
     detailimage: detailimage6,
     designerImage: marryRolson,
     designerDescription: "Marry Rolson is a freelance web developer with more than two years of experience behind and also beginner contributing blogger. Interest in such areas as web-design, web development, motivation, self-improvement, online education and personal growth.",
-    tag: "Reciepe"
+    tag: ["Reciepe"]
   }
 ];
 

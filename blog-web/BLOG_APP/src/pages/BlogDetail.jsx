@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import blogCardData from "../data/blogCardData";
 
 export default function BlogDetail() {
@@ -25,11 +25,11 @@ export default function BlogDetail() {
 
             {/* Post metadata */}
             <div className="detail-side-box">
-              <div className="detail-date-box bg-white">
+              <div className="detail-date-box">
                 <div className="detail-date-month">{monthDay}</div>
                 <div className="detail-date-year">{year}</div>
               </div>
-              <div className="detail-comment-box bg-white">
+              <div className="detail-comment-box">
                 <i className="fa-solid fa-comment detail-comment-icon"></i>
                 <div className="detail-comment-count">0</div>
               </div>
@@ -46,48 +46,72 @@ export default function BlogDetail() {
 
             {/* long description paragraph render */}
             {post.longDescription.split("\n").map((para, idx) => (
-              <p key={idx} className="detail-description mb-4 text-black">
+              <p key={idx} className="detail-description">
                 {para}
               </p>
             ))}
             <div className="pt-3 mt-4">
               <p className="mb-1">
                 <i className="fa-solid fa-folder me-2"></i>
-                Category: <a href="" className="hover-red-black-effect">{post.topic}</a>
+                Category:{" "}
+                {post.topic.map((t, idx) => (
+                  <span key={idx}>
+                    <Link to={``} className="hover-red-black-effect">
+                      {t}
+                    </Link>
+                    {idx < post.topic.length - 1 && (
+                      <span className="hover-red-black-effect">, </span>
+                    )}
+                  </span>
+                ))}
               </p>
 
-              {/* Render only when a tag exists */}
+              {/* Render only when tags exist */}
               {post.tag && (
                 <p>
                   <i className="fa-solid fa-bookmark me-2"></i>
-                  Tag: <a href="" className="hover-red-black-effect">{post.tag}</a>
+                  Tag:{" "}
+                  {post.tag.map((t, idx) => (
+                    <span key={idx}>
+                      <Link to={``} className="hover-red-black-effect">
+                        {t}
+                      </Link>
+                      {idx < post.tag.length - 1 && (
+                        <span className="hover-red-black-effect">, </span>
+                      )}
+                    </span>
+                  ))}
                 </p>
               )}
             </div>
           </div>
 
           {/* designer info */}
-          <div className="border rounded d-flex align-items-center gap-4 p-4">
-            <img src={post.designerImage} alt={post.name} className="rounded-circle designerImage" />
-            <div>
-              <p className="designer-name mb-2">
-                About <span className="hover-red-black-effect">{post.name}</span>
-              </p>
-              <p className="designer-description mb-0">{post.designerDescription}</p>
+          <div className="border rounded p-4">
+            <div className="row align-items-center g-4">
+              <div className="col-12 col-sm-4 text-center">
+                <img src={post.designerImage} alt={post.name} className="designerImage" />
+              </div>
+              <div className="col-12 col-sm-8">
+                <p className="designer-name text-center text-sm-start">
+                  About <span className="hover-red-black-effect">{post.name}</span>
+                </p>
+                <p className="designer-description">{post.designerDescription}</p>
+              </div>
             </div>
           </div>
 
           {/* Comment form */}
           <div className="comment-form-wrapper">
-            <h5 className="form-head-title fw-bold mb-3">Leave a Reply</h5>
-            <p className="form-subtitle small mb-4">
+            <h5 className="form-head-title">Leave a Reply</h5>
+            <p className="form-subtitle">
               Your email address will not be published.{" "}
               <span>Required fields are marked</span>{" "}
               <span className="required-star">*</span>
             </p>
             <form>
               <div className="mb-3">
-                <label htmlFor="comment" className="form-label small required-text">
+                <label htmlFor="comment" className="form-label small">
                   Comment <span className="required-star">*</span>
                 </label>
                 <textarea
@@ -97,26 +121,26 @@ export default function BlogDetail() {
                 ></textarea>
               </div>
               <div className="mb-3">
-                <label htmlFor="name" className="form-label small required-text">
+                <label htmlFor="name" className="form-label small">
                   Name <span className="required-star">*</span>
                 </label>
                 <input type="text" id="name" className="form-control comment-input" />
               </div>
               <div className="mb-3">
-                <label htmlFor="email" className="form-label small required-text">
+                <label htmlFor="email" className="form-label small">
                   Email <span className="required-star">*</span>
                 </label>
                 <input type="email" id="email" className="form-control comment-input" />
               </div>
               <div className="mb-3">
-                <label htmlFor="website" className="form-label small required-text">
+                <label htmlFor="website" className="form-label small">
                   Website
                 </label>
                 <input type="text" id="website" className="form-control comment-input" />
               </div>
               <div className="form-check mb-5">
-                <input type="checkbox" className="form-check-input" id="notifyMe" />
-                <label htmlFor="notifyMe" className="form-check-label small">
+                <input type="checkbox" className="form-check-input" />
+                <label className="form-check-label small">
                   Notify me via e-mail if anyone answers my comment.
                 </label>
               </div>

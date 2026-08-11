@@ -14,6 +14,10 @@ a:hover {
 	color: #666666;
 }
 
+.color-pink {
+	color: #ff0099;
+}
+
 .container {
 	max-width: 1140px;
 }
@@ -92,6 +96,7 @@ a:hover {
 	border: 1px solid #e5e5e5;
 	padding: 8px 4px 24px;
 	text-align: center;
+	background-color: #ffffff;
 }
 
 .detail-date-month {
@@ -108,6 +113,8 @@ a:hover {
 
 .detail-title {
 	font-size: 30px;
+	display: flex;
+	padding-right: 50px;
 }
 
 .detail-comment-box {
@@ -115,6 +122,7 @@ a:hover {
 	margin-top: 20px;
 	padding: 10px 4px 30px;
 	text-align: center;
+	background-color: #ffffff;
 }
 
 .detail-comment-icon {
@@ -144,6 +152,7 @@ a:hover {
 .detail-description {
 	font-size: 16px;
 	line-height: 1.8;
+	margin-bottom: 24px;
 }
 
 .hover-red-black-effect {
@@ -174,12 +183,14 @@ a:hover {
 .designerImage {
 	width: 160px;
 	border: 0.5px solid #e5e5e5;
+	border-radius: 50%;
 	object-fit: cover;
 }
 
 .designer-name {
 	font-family: 'Times New Roman', Times, serif;
 	font-size: 14px;
+	margin-bottom: 8px;
 }
 
 .designer-description {
@@ -190,6 +201,8 @@ a:hover {
 /* Comment Form */
 .form-head-title {
 	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	margin-bottom: 16px;
 }
 
 .comment-form-wrapper {
@@ -202,6 +215,7 @@ a:hover {
 .comment-form-wrapper label {
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
+	margin-bottom: 24px;
 }
 
 .comment-form-wrapper label {

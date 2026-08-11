@@ -4,15 +4,20 @@ export default function BlogCard(props) {
     const post = props.post;
 
     return (
-        <div className="card h-100 border-0 rounded-0 blog-card-shadow">
+        <div className="card blog-card-shadow h-100 border-0 rounded-0">
             <Link to={`/blog/${post.id}`}>
-                <img className="card-img-top rounded-0" src={post.image} alt={post.title} />
+                <img className="w-100 rounded-0" src={post.image} alt={post.title} />
             </Link>
             <div className="card-body">
                 <div className="d-block mb-3">
-                    <a href="" className="card-topic fw-medium small">
-                        {post.topic}
-                    </a>
+                    {post.topic.map((t, idx) => (
+                        <span key={idx}>
+                            <Link to={``} className="card-topic small">
+                                {t}
+                            </Link>
+                            {idx < post.topic.length - 1 && <span className="color-pink">, </span>}
+                        </span>
+                    ))}
                 </div>
                 {/* Title to details page link */}
                 <Link to={`/blog/${post.id}`} className="card-title pink-hover-effect h4 fw-bolder d-block">
