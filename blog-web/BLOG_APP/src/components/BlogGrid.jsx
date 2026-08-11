@@ -5,8 +5,8 @@ export default function BlogGrid(props) {
 
     return (
         <div className="container py-5">
-            <div className="row gx-4 gy-5">
-                {posts.map(function (post) {
+            <div className="grid-padding row gx-4 gy-5">
+                {posts.map((post) => {
                     return (
                         <div className="col-12 col-md-6 col-lg-4" key={post.id}>
                             <BlogCard post={post} />

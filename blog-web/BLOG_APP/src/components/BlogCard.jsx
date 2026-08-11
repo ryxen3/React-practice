@@ -1,17 +1,24 @@
+import { Link } from "react-router-dom"
+
 export default function BlogCard(props) {
     const post = props.post;
 
     return (
         <div className="card h-100 border-0 rounded-0 blog-card-shadow">
-            <img className="card-img-top rounded-0" src={post.image} alt={post.title} />
+            <Link to={`/blog/${post.id}`}>
+                <img className="card-img-top rounded-0" src={post.image} alt={post.title} />
+            </Link>
             <div className="card-body">
                 <div className="d-block mb-3">
                     <a href="" className="card-topic fw-medium small">
                         {post.topic}
                     </a>
                 </div>
-                <a href="" className="card-title pink-hover-effect h4">{post.title}</a>
-                <p className="card-text small fw-medium mt-3">{post.description}</p>
+                {/* Title to details page link */}
+                <Link to={`/blog/${post.id}`} className="card-title pink-hover-effect h4 fw-bolder d-block">
+                    {post.title}
+                </Link>
+                <p className="card-text small fw-medium mt-3">{post.shortDescription}</p>
                 <div className="d-flex gap-3 small mb-3">
                     <span className="d-inline-flex align-items-center gap-1">
                         <i className="fa-solid fa-user icon-hover-effect"></i>

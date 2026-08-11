@@ -18,6 +18,10 @@ a:hover {
 	max-width: 1140px;
 }
 
+.grid-padding {
+	padding: 0px 12px;
+}
+
 /* header */
 .header {
 	background-color: #1c2547;
@@ -43,7 +47,7 @@ a:hover {
 }
 
 .blog-card-shadow {
-	box-shadow: 0 10px 30px #22222233;
+	box-shadow: 0 5px 20px #55556633;
 }
 
 /* hover effects */
@@ -61,4 +65,174 @@ a:hover {
 
 .icon-hover-effect:hover {
 	color: #666666;
+}
+
+/* blog-detail */
+.detail-container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.detail-wrapper {
+	border: 0.5px solid #eeeeee;
+	position: relative;
+	padding: 24px;
+	margin-bottom: 30px;
+}
+
+.detail-side-box {
+	width: 70px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.detail-date-box {
+	border: 1px solid #e5e5e5;
+	padding: 8px 4px 24px;
+	text-align: center;
+}
+
+.detail-date-month {
+	font-size: 14px;
+	color: #E21130;
+}
+
+.detail-date-year {
+	font-size: 20px;
+	color: #E21130;
+	border-top: 1px solid #E21130;
+	padding-top: 2px;
+}
+
+.detail-title {
+	font-size: 30px;
+}
+
+.detail-comment-box {
+	border: 1px solid #e5e5e5;
+	margin-top: 20px;
+	padding: 10px 4px 30px;
+	text-align: center;
+}
+
+.detail-comment-icon {
+	color: #222222;
+	font-size: 14px;
+}
+
+.detail-comment-count {
+	font-size: 12px;
+	color: #E21130;
+	margin-top: 2px;
+	border-top: 1px solid #e5e5e5;;
+}
+
+.detail-name-badge {
+	position: absolute;
+	top: 20px;
+	left: -15px;
+	background-color: #E21130;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+.detail-description {
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+.hover-red-black-effect {
+	color: #E21130;
+}
+
+.hover-red-black-effect:hover {
+	color: #000000;
+}
+
+.detail-title,
+.detail-name-badge,
+.detail-date-box,
+.detail-comment-box,
+.detail-description {
+	font-family: "Poppins", sans-serif;
+}
+
+.detail-date-box:hover .detail-date-month,
+.detail-date-box:hover .detail-date-year,
+.detail-comment-count:hover,
+.detail-name-badge:hover {
+	color: #000000;
+}
+
+/* designer section */
+
+.designerImage {
+	width: 160px;
+	border: 0.5px solid #e5e5e5;
+	object-fit: cover;
+}
+
+.designer-name {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 14px;
+}
+
+.designer-description {
+	font-family: "Poppins", sans-serif;
+	line-height: 1.8;
+}
+
+/* Comment Form */
+.form-head-title {
+	font-family: "Montserrat", sans-serif;
+}
+
+.comment-form-wrapper {
+	border: 0.5px solid #e5e5e5;
+	padding: 24px;
+	margin-top: 30px;
+}
+
+.form-subtitle,
+.comment-form-wrapper label {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+}
+
+.comment-form-wrapper label {
+	letter-spacing: 2px;
+}
+
+.required-star {
+	color: #E21130;
+}
+
+.comment-textarea,
+.comment-input {
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+}
+
+.comment-input {
+	background-color: #f7f7f7;
+}
+
+.comment-submit-btn {
+	font-family: "Montserrat", sans-serif;
+	background-color: #f7f7f7;
+	color: #E21130;
+	font-weight: 700;
+	font-size: 16px;
+	border-radius: 2px;
+	padding: 10px 24px;
+}
+
+.comment-submit-btn:hover {
+	background-color: #E21130;
+	color: #ffffff;
 }
