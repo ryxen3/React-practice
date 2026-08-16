@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export default function Account(props) {
+    // get all data
     const formData = props.formData;
     const handleChange = props.handleChange;
     const goNext = props.goNext;

@@ -5,6 +5,7 @@ export default function BlogGrid(props) {
 
     return (
         <div className="container py-5">
+            {/* shows all blogcard posts in a grid */}
             <div className="grid-padding row gx-4 gy-5">
                 {posts.map((post) => {
                     return (

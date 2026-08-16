@@ -25,17 +25,21 @@ export default function BlogDetail() {
 
             {/* Post metadata */}
             <div className="detail-side-box">
+
+              {/* date part */}
               <div className="detail-date-box">
                 <div className="detail-date-month">{monthDay}</div>
                 <div className="detail-date-year">{year}</div>
               </div>
+
+              {/* comment part */}
               <div className="detail-comment-box">
                 <i className="fa-solid fa-comment detail-comment-icon"></i>
                 <div className="detail-comment-count">0</div>
               </div>
             </div>
             <div className="position-relative mb-2">
-              <div className="detail-title d-flex justify-content-between">
+              <div className="detail-title">
                 <span>{post.title}</span>
               </div>
               <div className="position-relative mt-2">
@@ -44,22 +48,22 @@ export default function BlogDetail() {
               </div>
             </div>
 
-            {/* long description paragraph render */}
-            {post.longDescription.split("\n").map((para, idx) => (
-              <p key={idx} className="detail-description">
-                {para}
+            {/* long description paragraphgraph render */}
+            {post.longDescription.split("\n").map((paragraph, index) => (
+              <p key={index} className="detail-description">
+                {paragraph}
               </p>
             ))}
             <div className="pt-3 mt-4">
               <p className="mb-1">
                 <i className="fa-solid fa-folder me-2"></i>
                 Category:{" "}
-                {post.topic.map((t, idx) => (
-                  <span key={idx}>
+                {post.topic.map((t, index) => (
+                  <span key={index}>
                     <Link to={``} className="hover-red-black-effect">
                       {t}
                     </Link>
-                    {idx < post.topic.length - 1 && (
+                    {index < post.topic.length - 1 && (
                       <span className="hover-red-black-effect">, </span>
                     )}
                   </span>
@@ -71,12 +75,12 @@ export default function BlogDetail() {
                 <p>
                   <i className="fa-solid fa-bookmark me-2"></i>
                   Tag:{" "}
-                  {post.tag.map((t, idx) => (
-                    <span key={idx}>
+                  {post.tag.map((t, index) => (
+                    <span key={index}>
                       <Link to={``} className="hover-red-black-effect">
                         {t}
                       </Link>
-                      {idx < post.tag.length - 1 && (
+                      {index < post.tag.length - 1 && (
                         <span className="hover-red-black-effect">, </span>
                       )}
                     </span>

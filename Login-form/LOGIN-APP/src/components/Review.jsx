@@ -2,6 +2,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export default function Review(props) {
+
+    // get all data
     const formData = props.formData;
     const goPrevious = props.goPrevious;
     const handleConfirm = props.handleConfirm;

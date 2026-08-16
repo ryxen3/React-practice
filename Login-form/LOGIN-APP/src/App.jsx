@@ -5,6 +5,8 @@ import Review from "./components/Review";
 import Typography from "@mui/material/Typography";
 
 export default function App() {
+
+  // states for each state navigation and setting the form data
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     email: "",
@@ -16,6 +18,7 @@ export default function App() {
     education: ""
   });
 
+  // function to change values
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -25,6 +28,7 @@ export default function App() {
     });
   };
 
+  // functions for step navigation
   const goNext = () => {
     setStep(step + 1);
   };

@@ -10,12 +10,13 @@ export default function BlogCard(props) {
             </Link>
             <div className="card-body">
                 <div className="d-block mb-3">
-                    {post.topic.map((t, idx) => (
-                        <span key={idx}>
+                    {/* links to another page  currently not needed*/}
+                    {post.topic.map((topic, index) => (
+                        <span key={index}>
                             <Link to={``} className="card-topic small">
-                                {t}
+                                {topic}
                             </Link>
-                            {idx < post.topic.length - 1 && <span className="color-pink">, </span>}
+                            {index < post.topic.length - 1 && <span className="color-pink">, </span>}
                         </span>
                     ))}
                 </div>
@@ -25,10 +26,12 @@ export default function BlogCard(props) {
                 </Link>
                 <p className="card-text small fw-medium mt-3">{post.shortDescription}</p>
                 <div className="d-flex gap-3 small mb-3">
+                    {/* designer info */}
                     <span className="d-inline-flex align-items-center gap-1">
                         <i className="fa-solid fa-user icon-hover-effect"></i>
                         <a href="">{post.name}</a>
                     </span>
+                    {/* publish date */}
                     <span className="d-inline-flex align-items-center gap-1">
                         <i className="fa-regular fa-clock icon-hover-effect"></i>
                         <a href="">{post.date}</a>
