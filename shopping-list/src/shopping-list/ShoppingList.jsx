@@ -10,6 +10,7 @@ export default function ShoppingList() {
         useShoppingList();
     return (
         <div className="page">
+            <h1 className="app-title">Shopping List</h1>
             <div className="card">
                 <AddItemInput onAdd={addItem} />
                 <ShoppingItemList

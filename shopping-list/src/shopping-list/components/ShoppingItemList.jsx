@@ -9,6 +9,7 @@ export default function ShoppingItemList({ items, onToggleDone, onChangeQuantity
             </div>
         );
     }
+
     return (
         <div className="items">
             {items.map((item) => (

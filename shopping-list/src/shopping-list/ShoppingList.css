@@ -2,12 +2,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* page in the background */
 .page {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #bfe0f7;
@@ -20,9 +22,18 @@ body {
   box-shadow: 0 5px 25px #00000055;
 }
 
+/* app title on top of the card */
+.app-title {
+  margin-bottom: 30px;
+  color: #ef6f6c;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
 /*add inputs from AddInputItem */
 .add-row {
-  padding: 16px;
+  padding: 16px 8px;
 }
 
 .add-input-wrap {
@@ -65,7 +76,7 @@ body {
 
 /* ShoppingItem items */
 .items {
-  padding: 4px 16px 8px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -74,7 +85,7 @@ body {
 .item-row {
   display: flex;
   align-items: center;
-  padding: 8px 8px 8px 12px;
+  padding: 8px 4px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -82,7 +93,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 5px;
   border: 2px solid #ffffff;
   background: #ffffff;
   cursor: pointer;
@@ -135,9 +146,8 @@ body {
 
 .quantity-value {
   color: #ef6f6c;
-  font-weight: 600;
-  font-size: 14px;
-  width: 16px;
+  font-size: 16px;
+  width: 10px;
   text-align: center;
 }
 

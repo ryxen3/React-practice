@@ -3,10 +3,11 @@ import QuantityControl from "./QuantityControl";
 // One row: checkbox, name, quantity control, delete button
 export default function ShoppingItem({ item, onToggleDone, onChangeQuantity, onRemove }) {
     const { id, name, qty, done } = item;
+
     return (
         <div className="item-row">
             <button className={`checkbox ${done ? "checked" : ""}`} onClick={() => onToggleDone(id)}>
-                {done && "✔"}
+                {done && <i className="fa-solid fa-check"></i>}
             </button>
             <span className={`item-name ${done ? "done" : ""}`}>{name}</span>
             <QuantityControl
@@ -15,7 +16,7 @@ export default function ShoppingItem({ item, onToggleDone, onChangeQuantity, onR
                 onIncrease={() => onChangeQuantity(id, 1)}
             />
             <button className="delete-btn" onClick={() => onRemove(id)}>
-                X
+                <i className="fa-solid fa-trash"></i>
             </button>
         </div>
     );

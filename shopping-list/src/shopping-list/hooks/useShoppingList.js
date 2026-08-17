@@ -1,8 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+//global key variable so that we can use get and set Items in localStorage with it 
+const STORAGE_KEY = "shopping-list-items";
 
 // Custom hook that holds all the shopping list state and logic
 export function useShoppingList() {
-  const [items, setItems] = useState([]); // list starts empty
+
+ // load saved items from localStorage on first render
+  const [items, setItems] = useState(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : [];
+  });
+ 
+  // save items to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  }, [items]);
 
   // total quantity of all items combined
   const total = items.reduce((sum, item) => sum + item.qty, 0);
@@ -27,8 +40,7 @@ export function useShoppingList() {
             )
         );
     } else {
-        // add new item on the list
-        setItems([...items, { id: Date.now(), name: trimmedName, qty: 1, done: false }]);
+        setItems([...items, { id: Date.now(), name: trimmedName, qty: 1, done: false }]);     // add new item on the list
     }
   };
 

@@ -24,7 +24,7 @@ export default function AddItemInput({ onAdd }) {
                     placeholder="Add an item..."
                 />
                 <button className={`add-btn ${isActive ? "active" : ""}`} onClick={handleSubmit}>
-                    +
+                    <i className="fa-plus"></i>
                 </button>
             </div>
         </div>
