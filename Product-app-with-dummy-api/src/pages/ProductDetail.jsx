@@ -1,36 +1,19 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { formatPost } from "../utils/formatPost";
 
 export default function ProductDetail() {
   const params = useParams();
   const postId = Number(params.id);
-
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    // Fetch the specific product and its seller 
     Promise.all([
-      fetch(`https://fakestoreapi.com/products/${postId}`).then((res) => {
-        return res.json();
-      }),
-      fetch(`https://fakestoreapi.com/users/${postId}`).then((res) => {
-        return res.json();
-      })
+      fetch(`https://fakestoreapi.com/products/${postId}`).then((res) => res.json()),
+      fetch(`https://fakestoreapi.com/users/${postId}`).then((res) => res.json())
     ])
-      .then((results) => {
-        const product = results[0];
-        const user = results[1];
-
-        setPost({
-          id: product.id,
-          topic: product.category,
-          title: product.title,
-          longDescription: product.description,
-          name: user ? user.username : "Rafid",
-          rating: product.rating.rate,
-          ratingCount: product.rating.count,
-          image: product.image
-        });
+      .then(([product, user]) => {
+        setPost(formatPost(product, user));
       })
       .catch((error) => {
         console.log("Error:", error);
